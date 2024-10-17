@@ -48,13 +48,14 @@ Where:
 - `line_left['x']`  is the x-coordinate of the left line {line_left and line_right are lists}.
 - `line_right['x']` is the x-coordinate of the right line.
 
-## Running the Simulation
-To run the simulation, launch the lane_tracking launch file, In order to launch the launch file (you should first navigate inside the workspace of the package and then, use the following command): launch folderlaunch folder 
-```bash
-roslaunch lane_tracking_pkg wall_line_following.launch
-```
 ## Robot's Pose data
 While the robot is tracking a lane, its position and orientation data are continuously recorded in a .txt file. This stored data is later utilized to mark the lanes as virtual obstacles for Autonomous Navigation (DETAILS IN THIS REPO!).
+
+## Running the Simulation
+To run the simulation, launch the lane_tracking launch file, In order to launch the launch file (you should first navigate inside the workspace and then, use the following command):
+```bash
+roslaunch lane_tracking_pkg lane_tracking.launch
+```
 
 ## Create Ros Workspace
 Open shell and execute the following commands:
