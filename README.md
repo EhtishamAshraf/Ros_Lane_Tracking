@@ -3,7 +3,7 @@ This repository features a custom ROS package, lane_tracking_pkg, designed to en
 
 ### Demo Video
 You can watch the demo video by clicking on the below image
-[![Watch the video](https://github.com/EhtishamAshraf/Ros_Lane_Tracking/blob/main/src/lane_tracking_pkg/Images/simulation.png)](https://www.youtube.com/watch?v=d6_b9ii4WU4&t=2s)
+[![Watch the video](https://github.com/EhtishamAshraf/Ros_Lane_Tracking/blob/main/src/lane_tracking_pkg/Images/simulation.png)](https://youtu.be/AojJgdawQTQ)
 
 ## Gazebo World
 Below image shows the Gazebo world used in this project. The world contains white and yellow lines.
@@ -49,7 +49,8 @@ Where:
 - `line_right['x']` is the x-coordinate of the right line.
 
 ## Robot's Pose data
-While the robot is tracking a lane, its position and orientation data are continuously recorded in a .txt file. This stored data is later utilized to mark the lanes as virtual obstacles for Autonomous Navigation (DETAILS IN THIS REPO!).
+While the robot is tracking a lane, its position and orientation data are continuously recorded in a .txt file. This stored data is later utilized to mark the lanes as virtual obstacles for Autonomous Navigation.
+[virtual_obstacle_lane_navigation](https://github.com/EhtishamAshraf/virtual_obstacle_lane_navigation.git)
 
 ## Running the Simulation
 To run the simulation, launch the lane_tracking launch file, In order to launch the launch file (you should first navigate inside the workspace and then, use the following command):
