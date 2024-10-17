@@ -35,30 +35,28 @@ Below image shows the Gazebo world used in this project. The world contains whit
   - Track the lane using PD controller
 ### Formula for Desired Center
 
-The desired center is calculated as the midpoint between the left and right lines. The formula is:
+The desired center is calculated as the midpoint between the yellow and white lines. The formula is:
 
-\[
-\text{desired\_center} = \frac{{\text{line\_left}['x'] + \text{line\_right}['x']}}{2}
-\]
+desired_center = (line_left['x'] + line_right['x']) / 2
 
 Where:
-- `line_left['x']` is the x-coordinate of the left line.
+- `line_left['x']`  is the x-coordinate of the left line {line_left and line_right are lists}.
 - `line_right['x']` is the x-coordinate of the right line.
 ![Wall Following](https://github.com/EhtishamAshraf/Turtlebot3_line_wall_following/blob/main/src/follower_robot_pkg/Images/3.png)
 
 ## Running the Simulation
-To run the simulation, launch the wall_line_following launch file, In order to launch the launch file (you should first navigate inside the launch folder of the package and then, use the following command): 
+To run the simulation, launch the lane_tracking launch file, In order to launch the launch file (you should first navigate inside the workspace of the package and then, use the following command): launch folderlaunch folder 
 ```bash
-roslaunch wall_line_following.launch
+roslaunch lane_tracking_pkg wall_line_following.launch
 ```
 
 ## Create Ros Workspace
 Open shell and execute the following commands:
 ```bash
-mkdir wall_line_following_ws
+mkdir lane_tracking_ws
 ```
 ```bash
-cd wall_line_following_ws
+cd lane_tracking_ws
 ```
 # Clone the repository
 ```bash
@@ -80,12 +78,10 @@ catkin_make
 ```bash
 source devel/setup.bash 
 ```
-Navigate to the Scripts folder inside the package and make the Python files executable by running the following commands:
+Navigate to the Scripts folder inside the package and make the Python files executable by running the following command:
 ```bash
-chmod +x wall_line_following.py
-chmod +x world_control.py
+chmod +x *.py
 ```
-
 Press Enter and navigate to the launch folder inside the package
 ```bash
 roslaunch wall_line_following.launch
