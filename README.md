@@ -93,7 +93,7 @@ lane_tracking.py
 lane_with_centroids.py
 ```
 
-Press Enter and navigate to the launch folder inside the package
+Now navigate to the launch folder inside the package
 ```bash
 roslaunch lane_tracking.launch
 ```
