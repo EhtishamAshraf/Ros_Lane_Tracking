@@ -7,6 +7,7 @@ You can watch the demo video by clicking on the below image
 
 ## Gazebo World
 Below image shows the Gazebo world used in this project. The world contains white and yellow lines.
+
 ![Gazebo World](https://github.com/EhtishamAshraf/Ros_Lane_Tracking/blob/main/src/lane_tracking_pkg/Images/autorace_world.png)
 
 ### Note 
