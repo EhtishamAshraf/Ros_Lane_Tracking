@@ -3,11 +3,11 @@ This repository features a custom ROS package, lane_tracking_pkg, designed to en
 
 ### Demo Video
 You can watch the demo video by clicking on the below image
-[![Watch the video](https://github.com/EhtishamAshraf/Turtlebot3_line_wall_following/blob/main/src/follower_robot_pkg/Images/2.png)](https://www.youtube.com/watch?v=d6_b9ii4WU4&t=2s)
+[![Watch the video](https://github.com/EhtishamAshraf/Ros_Lane_Tracking/blob/main/src/lane_tracking_pkg/Images/simulation.png)](https://www.youtube.com/watch?v=d6_b9ii4WU4&t=2s)
 
 ## Gazebo World
 Below image shows the Gazebo world used in this project. The world contains white and yellow lines.
-![Gazebo World](https://github.com/EhtishamAshraf/Turtlebot3_line_wall_following/blob/main/src/follower_robot_pkg/Images/1.png)
+![Gazebo World](https://github.com/EhtishamAshraf/Ros_Lane_Tracking/blob/main/src/lane_tracking_pkg/Images/autorace_world.png)
 
 ### Note 
 1.  Details about cloning the repository are given at the end of this **readme file**
@@ -16,17 +16,21 @@ Below image shows the Gazebo world used in this project. The world contains whit
   - Convert RGB image to HSV
   - Define the HSV range for detecting white and yellow color lines in the image
   - Create and display the masked image (highlighting the white and yellow detected lines)
-  - Combine the white and yellow masks using a bitwise OR operation, allowing both lane lines to be   
+  - Combine the white and yellow masks using a bitwise OR operation, allowing both lane 
+    lines to be   
     visible in a single image
   - Find the contours in the masked image
   - If contours exist:
       - Get the second and third biggest contour based on the area
-      - apply bitwise_and to extract the region where yellow and white lines are present in the 
+      - apply bitwise_and to extract the region where yellow and white lines are present 
+        in the 
         original image
       - draw the contour for visualization
       - find the moments of the selected contours
       - find the centroids of the selected contours from the moments
       - draw a circle to highlight the centroid
+
+![Cmera Output](https://github.com/EhtishamAshraf/Ros_Lane_Tracking/blob/main/src/lane_tracking_pkg/Images/camera_output.png)
         
 ## Robot's Movement Control using PD Controller
   - calculate the error by finding the difference b/w camera_center and the x position of the   
@@ -42,7 +46,6 @@ desired_center = (line_left['x'] + line_right['x']) / 2
 Where:
 - `line_left['x']`  is the x-coordinate of the left line {line_left and line_right are lists}.
 - `line_right['x']` is the x-coordinate of the right line.
-![Wall Following](https://github.com/EhtishamAshraf/Turtlebot3_line_wall_following/blob/main/src/follower_robot_pkg/Images/3.png)
 
 ## Running the Simulation
 To run the simulation, launch the lane_tracking launch file, In order to launch the launch file (you should first navigate inside the workspace of the package and then, use the following command): launch folderlaunch folder 
