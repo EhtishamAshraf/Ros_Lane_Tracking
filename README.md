@@ -37,7 +37,7 @@ Below image shows the Gazebo world used in this project. The world contains whit
   - calculate the error by finding the difference b/w camera_center and the x position of the   
     centroids of both lines
   - calculate the PD controller output based on the proportional, and derivative terms
-  - Track the lane using PD controller
+  - track the lane using PD controller
 ### Formula for Desired Center
 
 The desired center is calculated as the midpoint between the yellow and white lines. The formula is:
@@ -53,6 +53,8 @@ To run the simulation, launch the lane_tracking launch file, In order to launch 
 ```bash
 roslaunch lane_tracking_pkg wall_line_following.launch
 ```
+## Robot's Pose data
+While the robot is tracking a lane, its position and orientation data are continuously recorded in a .txt file. This stored data is later utilized to mark the lanes as virtual obstacles for Autonomous Navigation (DETAILS IN THIS REPO!).
 
 ## Create Ros Workspace
 Open shell and execute the following commands:
@@ -70,7 +72,7 @@ sudo apt-get update
 sudo apt-get install git
 ```
 ```bash
-git clone https://github.com/EhtishamAshraf/Turtlebot3_line_wall_following.git
+git clone https://github.com/EhtishamAshraf/Ros_Lane_Tracking.git
 ```
 ```bash
 cd Turtlebot3_line_wall_following
@@ -86,7 +88,22 @@ Navigate to the Scripts folder inside the package and make the Python files exec
 ```bash
 chmod +x *.py
 ```
+There are two Python scripts located in the scripts folder:
+1. This script is responsible for tracking the lane without saving the robot's pose data.
+```bash
+lane_tracking.py
+```
+2. This script tracks the lane while simultaneously saving the robot's pose data.
+```bash
+lane_with_centroids.py
+```
+
 Press Enter and navigate to the launch folder inside the package
 ```bash
-roslaunch wall_line_following.launch
+roslaunch lane_tracking.launch
+```
+or
+
+```bash
+roslaunch lane_tracking.launch log_pose_to_file:=true
 ```
