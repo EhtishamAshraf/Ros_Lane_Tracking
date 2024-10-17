@@ -50,6 +50,7 @@ Where:
 
 ## Robot's Pose data
 While the robot is tracking a lane, its position and orientation data are continuously recorded in a .txt file. This stored data is later utilized to mark the lanes as virtual obstacles for Autonomous Navigation.
+For part 2 of the project, have a look at the following repository:
 [virtual_obstacle_lane_navigation](https://github.com/EhtishamAshraf/virtual_obstacle_lane_navigation.git)
 
 ## Running the Simulation
@@ -58,14 +59,6 @@ To run the simulation, launch the lane_tracking launch file, In order to launch 
 roslaunch lane_tracking_pkg lane_tracking.launch
 ```
 
-## Create Ros Workspace
-Open shell and execute the following commands:
-```bash
-mkdir lane_tracking_ws
-```
-```bash
-cd lane_tracking_ws
-```
 # Clone the repository
 ```bash
 sudo apt-get update
@@ -77,7 +70,7 @@ sudo apt-get install git
 git clone https://github.com/EhtishamAshraf/turtlebot3_lane_tracking.git
 ```
 ```bash
-cd Turtlebot3_line_wall_following
+cd turtlebot3_lane_tracking
 ```
 Run the below commands in root folder of the workspace
 ```bash
