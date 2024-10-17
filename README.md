@@ -58,6 +58,8 @@ To run the simulation, launch the lane_tracking launch file, In order to launch 
 ```bash
 roslaunch lane_tracking_pkg lane_tracking.launch
 ```
+### Note: 
+I have used cv_bridge, turtlebot3_gazebo, gazebo_ros packages, so plesae download all necessary packages before cloning the repository.
 
 # Clone the repository
 ```bash
