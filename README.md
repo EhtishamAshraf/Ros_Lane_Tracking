@@ -73,7 +73,7 @@ sudo apt-get update
 sudo apt-get install git
 ```
 ```bash
-git clone https://github.com/EhtishamAshraf/Ros_Lane_Tracking.git
+git clone https://github.com/EhtishamAshraf/turtlebot3_lane_tracking.git
 ```
 ```bash
 cd Turtlebot3_line_wall_following
